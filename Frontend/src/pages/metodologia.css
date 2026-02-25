@@ -1,0 +1,27 @@
+.metodologia-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, #0c0f24, #111633);
+}
+
+.metodologia-container {
+    width: 100%;
+}
+
+.metodologia-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.metodologia-text h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, #7aa2ff, #4de0c1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

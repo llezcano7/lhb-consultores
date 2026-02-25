@@ -1,0 +1,26 @@
+ :root {
+   --primary-color: #1A3A63;
+   --secondary-color: #5e5e5e;
+   --third-color: #FFFFFF;
+   --fourth-color: #383838;
+   --accent: #00D9FF;
+   --accent-2: #0066FF;
+   --text-light: #E8F0F8;
+   --text-dim: #8FA3BF;
+   --gradient-1: linear-gradient(135deg, #0A1628 0%, #1A2F4F 100%);
+   --gradient-2: linear-gradient(135deg, #00D9FF 0%, #0066FF 100%);
+   --primary: #1A3A63;
+   --secondary: #1A2F4F;
+ }
+
+ .container {
+   padding-inline: 6rem;
+ }
+
+ .block {
+   padding-block: 8rem;
+ }
+
+ .bold {
+   font-weight: bolder;
+ }

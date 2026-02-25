@@ -1,0 +1,316 @@
+.services-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #0c0f24, #111633);
+  overflow: hidden;
+}
+
+.services-container {
+  padding-block-start: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.services-text {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.services-eyebrow {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #7aa2ff;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.services-text h2 {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.services-text h2 span {
+  background: linear-gradient(90deg, #7aa2ff, #4de0c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services-text p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #cfd3ff;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── Card de cada servicio ── */
+
+.service-card {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+  padding: 64px 0;
+  border-top: 1px solid rgba(122, 162, 255, 0.15);
+}
+
+.service-card:last-child {
+  border-bottom: 1px solid rgba(122, 162, 255, 0.15);
+}
+
+/* ── Alternancia de layout ── */
+.layout-normal {
+  grid-template-columns: 1fr 2fr;
+}
+
+.layout-reversed {
+  grid-template-columns: 2fr 1fr;
+}
+
+.layout-reversed .service-col-title {
+  order: 2;
+  text-align: end;
+}
+
+.layout-reversed .service-col-content {
+  order: 1;
+}
+
+/* ── Columna del título ── */
+
+.service-card-eyebrow {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #7aa2ff;
+}
+
+.service-col-title {
+ display: flex;
+ flex-direction: column;
+ align-items: start;
+ justify-content: center;
+}
+
+.service-card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--third-color);
+}
+
+.service-card-decription {
+  font-size: 1.1rem;
+  color: var(--third-color);
+}
+
+.service-col-title p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  padding-block-start: 2rem;
+}
+
+
+/* ── Columna de contenido ── */
+.service-col-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Problemáticas ── */
+.problems-list {
+  font-size: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+.problems-list li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(122, 162, 255, 0.1);
+  font-size: 1rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.problems-list li:last-child {
+  border-bottom: none;
+}
+
+.dot {
+  margin-top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7aa2ff;
+  flex-shrink: 0;
+}
+
+/* ── Card de resultado ── */
+.result-card {
+  background: rgba(122, 162, 255, 0.08);
+  border: 1px solid rgba(122, 162, 255, 0.2);
+  border-radius: 16px;
+  padding: 28px 24px;
+}
+
+.result-card p {
+  font-size: 1rem;
+  color: var(--third-color);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── Beneficios ── */
+
+.benefits-label {
+  margin-bottom: 1rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.benefit-card {
+  border: 1px solid rgba(122, 162, 255, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.benefit-card:hover {
+  border-color: rgba(122, 162, 255, 0.5);
+  background: rgba(122, 162, 255, 0.05);
+}
+
+.benefit-card strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: var(--third-color);
+}
+
+.benefit-card p {
+  font-size: 1rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* Cards */
+
+.services-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card {
+  position: relative;
+  padding: 34px 30px 38px;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.015));
+  border-radius: 18px;
+  border: 1px solid rgba(122, 162, 255, 0.15);
+  backdrop-filter: blur(6px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left,
+      rgba(122, 162, 255, 0.25),
+      transparent 55%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(199, 199, 199, 0.45);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/*################ RESPONSIVE DESIGN ################*/
+
+@media (max-width: 1024px) {
+  .layout-normal {
+    grid-template-columns: 1fr 1.5fr;
+    /* menos diferencia entre columnas */
+  }
+
+  .layout-reversed {
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    /* los 4 items en una columna */
+  }
+}
+
+@media (max-width: 762px) {
+  .services-section.container {
+    padding-inline: 3rem;
+  }
+
+  .layout-normal,
+  .layout-reversed {
+    grid-template-columns: 1fr;
+  }
+
+  .layout-reversed .service-col-title,
+  .layout-reversed .service-col-content {
+    order: unset;
+  }
+
+  .service-col-title {
+    position: static;
+  }
+}
+
+@media (max-width: 510px) {
+  .services-section.container {
+    padding-inline: 1.5rem;
+  }
+
+  .layout-normal .service-col-title,
+  .service-card-decription {
+    text-align: center;
+  }
+
+  .layout-reversed .service-col-title,
+  .service-card-decription {
+    text-align: center;
+  }
+}

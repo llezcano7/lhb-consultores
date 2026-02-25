@@ -1,0 +1,115 @@
+.about-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0c0f24, #111633);
+  color: var(--third-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-container {
+  width: 100%;
+}
+
+.about-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #7aa2ff;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.about-header h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.about-header h2 span {
+  background: linear-gradient(90deg, #7aa2ff, #4de0c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  width: 70%;
+  color: #cfd3ff;
+  line-height: 1.6;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 70px;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(122, 162, 255, 0.2);
+}
+
+.about-card h3 {
+  margin-bottom: 15px;
+  color: #7aa2ff;
+}
+
+.about-card p {
+  color: #d6d9ff;
+  line-height: 1.5;
+}
+
+.about-vision {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-vision h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #4de0c1;
+}
+
+.about-vision p {
+  color: #cfd3ff;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+
+/*################ RESPONSIVE DESIGN ################*/
+
+@media (max-width: 723px) {
+  .about-section.container {
+    padding-inline: 3rem;
+  }
+
+  .about-header p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 510px) {
+  .about-section.container {
+    padding-inline: 1.5rem;
+  }
+}

@@ -1,8 +1,4 @@
-# Ignora node_modules en cualquier subcarpeta (Front y Back)
-**/node_modules/
-**/dist/
-
-# Ignorar archivos de entorno y secretos
+node_modules/
 .env
-**/.env
-**/.env.local
+dist/
+build/

@@ -1,0 +1,124 @@
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 2rem;
+    padding-block: .5rem;
+    background-color: var(--primary-color);
+}
+
+.top-header p {
+    color: var(--third-color);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.email-icon,
+.phone-icon {
+    margin-right: 0.3rem;
+    vertical-align: middle;
+    font-size: .8rem;
+}
+
+.header-container {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    z-index: 1000;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+
+.logo {
+    width: auto;
+    height: 130px;
+
+}
+
+.navigator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navigator a {
+    color: var(--third-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    gap: 1rem;
+}
+
+.hamburger {
+  display: none;     
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--third-color); 
+  font-size: 2rem;
+  z-index: 999;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hamburger:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+/*################ RESPONSIVE DESIGN ################*/
+
+@media (max-width: 900px) {
+
+  .hamburger {
+    display: block;
+  }  
+
+  .navigator {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 15, 35, 0.96);
+    backdrop-filter: blur(18px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    transform: translateY(-100%);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 900;
+  }
+
+  .navigator::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(100, 200, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(100, 200, 255, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridPulse 4s ease-in-out infinite;
+    z-index: 0;
+  }
+
+  .navigator a {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--third-color);
+    z-index: 1;
+  }
+
+  .navigator a::after {
+    display: none;
+  }
+
+  .header-container + .navigator,
+  .navigator.open {
+    transform: translateY(0);
+  }
+}

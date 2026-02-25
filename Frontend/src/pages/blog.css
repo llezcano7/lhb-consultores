@@ -1,0 +1,139 @@
+.blog-section {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #0c0f24, #111633);
+}
+
+
+.blog-header {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.blog-eyebrow {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #7aa2ff;
+  display: inline-block;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.blog-header h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.blog-header p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Grid */
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-block-start: 6rem;
+  gap: 1rem;
+}
+
+/* Card */
+
+.blog-card {
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.015));
+  border: 1px solid rgba(122, 162, 255, 0.15);
+  border-radius: 22px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(122, 162, 255, 0.25);
+}
+
+.blog-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 26px 24px 30px;
+}
+
+.blog-content h3 {
+  font-size: 1.1rem;
+  line-height: 1.35;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.blog-excerpt {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
+}
+
+.blog-content a {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(122, 162, 255, 0.9);
+  text-decoration: none;
+}
+
+.blog-content a:hover {
+  text-decoration: underline;
+}
+
+.blog-loading {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.blog-loading,
+.blog-error,
+.blog-empty {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.125rem;
+  color: #666;
+}
+
+.blog-error {
+  color: #d32f2f;
+  background-color: #ffebee;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+/*################ RESPONSIVE DESIGN ################*/
+
+@media (max-width: 723px) {
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.blog-header{
+  width: 100%;
+  text-align: center;
+  
+}
+}
+
+@media (max-width: 510px){
+  .blog-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+}
