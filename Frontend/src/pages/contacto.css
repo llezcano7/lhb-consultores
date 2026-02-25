@@ -24,15 +24,6 @@
   gap: 1rem;
 }
 
-.contact-text span {
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #7aa2ff;
-  display: inline-block;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
 .contact-text h3 {
   font-size: clamp(2rem, 3vw, 2.6rem);
   line-height: 1.15;
@@ -153,28 +144,25 @@
 /*################ RESPONSIVE DESIGN ################*/
 
 @media (max-width: 723px) {
-  .contact-container.container {
-    padding-inline: 3rem;
-  }
-  .contact-container{
+  .contact-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
   }
+
   .contact-text {
+    align-items: center;
     width: 100%;
   }
+
   .contact-form {
     width: 100%;
   }
 }
 
 @media (max-width: 510px) {
-  .contact-section.container {
-    padding-inline: 1.5rem;
-  }
   .contact-form {
     width: 100%;
   }

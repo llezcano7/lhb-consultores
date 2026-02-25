@@ -13,7 +13,7 @@ function ServiceCard({ service, index }) {
 
       {/* Columna del título */}
       <div className="service-col-title">
-        <h4 className="service-card-title">{service.title}</h4>
+        <h6 className="service-card-title">{service.title}</h6>
         <p className="service-card-description">{service.description}</p>
       </div>
 
@@ -77,13 +77,12 @@ export default function Servicios() {
   }, [location]);
 
   return (
-    <section className="services-section container block">
-      <div className="services-container">
-        <div className="services-text">
-          <span className="services-eyebrow">Nuestros servicios</span>
-          <h2>
-            Soluciones financieras <span>diseñadas para el futuro</span>
-          </h2>
+    <section className="section container block">
+        <div className="head-content">
+          <span className="eyebrow">Nuestros servicios</span>
+          <h3>
+            <span>Soluciones financieras</span> diseñadas para el futuro
+          </h3>
           <p>
             Combinamos análisis, estrategia y tecnología para impulsar decisiones
             financieras más inteligentes y sostenibles.
@@ -96,7 +95,6 @@ export default function Servicios() {
             <ServiceCard key={service.id} service={service} index={index} />
           ))}
         </div>
-      </div>
     </section>
   );
 }

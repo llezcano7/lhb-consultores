@@ -1,27 +1,195 @@
-.metodologia-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* Línea central */
+.timeline-container {
     position: relative;
-    background: linear-gradient(135deg, #0c0f24, #111633);
+    max-width: 1200px;
 }
 
-.metodologia-container {
-    width: 100%;
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, #00c6ff, #0072ff);
+    transform: translateX(-50%);
 }
 
-.metodologia-text {
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 40px;
+    animation: fadeUp 2s ease forwards;
+    opacity: 0;
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    gap: 1rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(0, 198, 255, 0.15);
+    transition: 0.4s ease;
 }
 
-.metodologia-text h3 {
-    font-size: 1rem;
+.timeline-content:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 40px rgba(0, 198, 255, 0.35);
+}
+
+.timeline-content h3 {
+    font-size: 1.4rem;
+    color: #4de0c1;
+}
+
+.timeline-content p {
+    font-size: 1.1rem;
+    color: var(--third-color)
+}
+
+.timeline-content ul {
+    padding-left: 15px;
+}
+
+.timeline-content li {
+    color: var(--text-light);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+.timeline-line-progress {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(to bottom,
+            #00c6ff,
+            #0072ff);
+    box-shadow: 0 0 15px #00c6ff,
+        0 0 30px rgba(0, 198, 255, 0.4);
+    transition: height 0.2s ease-out;
+}
+
+.timeline-line-progress::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    background: #00c6ff;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px #00c6ff,
+        0 0 40px rgba(0, 198, 255, 0.6);
+}
+
+
+.services-methodology {
+    text-align: center;
+    padding-block-start: 4rem;
+}
+
+.services-methodology h3 {
+    font-size: 2.5rem;
+    line-height: 1.15;
     font-weight: 600;
-    background: linear-gradient(90deg, #7aa2ff, #4de0c1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--third-color);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.service-card {
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(15px);
+    transition: 0.4s ease;
+    border: 1px solid rgba(0, 198, 255, 0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 35px rgba(0, 198, 255, 0.25);
+}
+
+.service-card h4 {
+    font-size: 1.2rem;
+    color: #7aa2ff;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+/*################ RESPONSIVE DESIGN ################*/
+
+
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 820px) {
+
+    .timeline-line {
+        left: 20px;
+        transform: translateX(0);
+        }
+
+    .timeline-item {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+    }
+
+    .timeline-content {
+        text-align: center;
+    }
 }

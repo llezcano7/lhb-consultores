@@ -128,9 +128,9 @@ export default function Inicio() {
 
             {/* METHOD SECTION */}
 
-            <section className="method-section container block">
-                <div className="method-content">
-                    <div className="method-text">
+            <section className="method-inicio-section container block">
+                <div className="method-inicio-content">
+                    <div className="method-inicio-text">
                         <h3>
                             ¿Caos operativo u <span>orden rentable?</span>
                         </h3>
@@ -140,7 +140,7 @@ export default function Inicio() {
                         </p>
                     </div>
                 </div>
-                <div className="method-animation">
+                <div className="method-inicio-animation">
                     <div className="tech-puzzle">
                         <span></span><span></span><span></span>
                         <span></span><span></span><span></span>
@@ -231,8 +231,8 @@ export default function Inicio() {
 
             <section className="contact-inicio-section container block">
                 <div className="contact-inicio-text">
-                    <h3>Trabajemos en equipo</h3>
-                    <p>Integramos estrategia, tecnología y visión financiera para optimizar la rentabilidad y el crecimiento de tu empresa. Trabajamos con métricas, proyecciones y planificación para que cada decisión tenga respaldo.
+                    <h3>Trabajemos juntos, potencia tu empresa</h3>
+                    <p>Ordenamos la gestión de tu empresa a través de un enfoque estratégico, información eficiente y planificación inteligente.
                         <br />
                         Comunicate con nosotros y construyamos juntos soluciones financieras para tu negocio.</p>
                 </div>

@@ -218,9 +218,9 @@
   right: 50%;
 }
 
-/*METHOD SECTION*/
+/* =============================== METHOD SECTION ================================ */
 
-.method-section {
+.method-inicio-section {
   width: 100%;
   display: flex;
   align-items: center;
@@ -229,11 +229,11 @@
   background-color: #E8F0F8;
 }
 
-.method-content {
+.method-inicio-content {
   width: 100%;
 }
 
-.method-text {
+.method-inicio-text {
   width: 40vw;
   display: flex;
   flex-direction: column;
@@ -242,31 +242,30 @@
   gap: 0.75rem;
 }
 
-.method-content h3 {
+.method-inicio-content h3 {
   font-size: 2.2rem;
   color: var(--primary-color);
 }
 
-.method-content span {
+.method-inicio-content span {
   background: linear-gradient(90deg, #7aa2ff, #4de0c1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.method-content p {
+.method-inicio-content p {
   font-size: 1.2rem;
   color: var(--text-dim);
   line-height: 1.6;
 }
 
-.method-animation {
+.method-inicio-animation {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* ===== PUZZLE GRID ===== */
 
 .tech-puzzle {
   width: 320px;
@@ -277,8 +276,6 @@
   grid-template-rows: repeat(3, 1fr);
   gap: 16px;
 }
-
-/* ===== BLOCKS ===== */
 
 .tech-puzzle span {
   position: relative;
@@ -1028,13 +1025,14 @@
 .contact-inicio-text h3 {
   font-size: 2.2rem;
   color: var(--third-color);
+  text-align: center;
 }
 
 .contact-inicio-text p {
   width: 70%;
   color: #cfd3ff;
   line-height: 1.6;
-  text-align: center;
+  text-align:center
 }
 
 .form-container {
@@ -1238,7 +1236,7 @@
     padding-inline: 3rem;
   }
 
-  .method-section .container {
+  .method-inicio-section .container {
     padding-inline: 3rem;
   }
 
@@ -1250,20 +1248,20 @@
     padding-inline: 3rem;
   }
 
-  .method-section,
-  .method-content {
+  .method-inicio-section,
+  .method-inicio-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .method-text {
+  .method-inicio-text {
     text-align: center;
     width: 100%;
   }
 
-  .method-animation {
+  .method-inicio-animation {
     width: auto;
   }
 
@@ -1308,7 +1306,7 @@
     font-size: 3rem;
   }
 
-  .method-section.container {
+  .method-inicio-section.container {
     padding-inline: 1.5rem;
   }
 

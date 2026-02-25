@@ -1,14 +1,3 @@
-.about-section {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #0c0f24, #111633);
-  color: var(--third-color);
-  position: relative;
-  overflow: hidden;
-}
-
-.about-container {
-  width: 100%;
-}
 
 .about-header {
   width: 100%;
@@ -20,16 +9,9 @@
   margin-bottom: 60px;
 }
 
-.about-text {
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  color: #7aa2ff;
-  display: inline-block;
-  margin-bottom: 15px;
-}
-
 .about-header h2 {
-  font-size: 42px;
+  font-size: 2.5rem;
+  color: var(--third-color);
   margin-bottom: 20px;
   font-weight: 600;
 }
@@ -49,6 +31,7 @@
 
 .about-grid {
   display: grid;
+  text-align: center;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
   margin-bottom: 70px;
@@ -99,17 +82,7 @@
 /*################ RESPONSIVE DESIGN ################*/
 
 @media (max-width: 723px) {
-  .about-section.container {
-    padding-inline: 3rem;
-  }
-
-  .about-header p {
+  .head-content p {
     width: 100%;
-  }
-}
-
-@media (max-width: 510px) {
-  .about-section.container {
-    padding-inline: 1.5rem;
   }
 }

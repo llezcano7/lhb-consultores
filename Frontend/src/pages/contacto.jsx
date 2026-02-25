@@ -5,8 +5,8 @@ const Contacto = () => {
     <section className="contact-section container">
       <div className="contact-container block">
         <div className="contact-text">
-          <span>Contacto</span>
-          <h3>Conectemos ideas, diseñemos soluciones</h3>
+          <span className="eyebrow">Contacto</span>
+          <h3>Trabajemos juntos, potencia tu empresa</h3>
           <p>Impulsamos la gestión financiera de pequeñas y medianas empresas con enfoque estratégico, análisis de datos y planificación inteligente. Convertimos información en decisiones claras y sostenibles.
             Contactanos y empecemos a diseñar una estructura financiera más sólida para tu negocio.</p>
           <div className="contact-info">

@@ -21,6 +21,65 @@
    padding-block: 8rem;
  }
 
- .bold {
-   font-weight: bolder;
+ .eyebrow {
+   font-size: 1.2rem;
+   letter-spacing: 2px;
+   color: #7aa2ff;
+   display: inline-block;
+   text-transform: uppercase;
+   margin-bottom: 15px;
  }
+
+ .section {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background: linear-gradient(135deg, #0c0f24, #111633);
+   position: relative;
+   overflow: hidden;
+ }
+
+ .head-content {
+   width: 80%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   gap: 0.75rem;
+   padding-block: 6rem;
+ }
+
+ .head-content h3 {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--third-color);
+}
+
+.head-content span {
+  background: linear-gradient(90deg, #7aa2ff, #4de0c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.head-content p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #cfd3ff;
+}
+
+@media (max-width: 723px) {
+  .section.container {
+    padding-inline: 3rem;
+  }
+}
+
+@media (max-width: 510px) {
+  .section.container {
+    padding-inline: 1.5rem;
+  }
+}
