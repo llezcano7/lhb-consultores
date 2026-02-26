@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useRef } from "react";
+import { FaCaretRight } from "react-icons/fa";
 import "./metodologia.css";
 
 const steps = [
@@ -55,6 +56,81 @@ const steps = [
         ],
     },
 ];
+
+////////////////////*METODOLOGÍA POR SERVICIO*/////////////////////
+
+export const methodservices = [
+    {
+        title: "Procesos",
+        description: [
+            "On boarding",
+            "Relevamiento de procesos",
+            "Identificación de problemas",
+            "Depuración de procesos irrelevantes",
+            "Rediseño y definición de procesos",
+            "Implementación y herramientas",
+            "Seguimientos de los resultados y propuestas de mejoras"
+        ]
+    },
+    {
+        title: "Estructura financiera",
+        description: [
+            "On boarding",
+            "Clasificaciòn de egresos",
+            "Estructura de costos",
+            "Asignación de costeos",
+            "Implementación y actualización",
+            "Seguimientos de los resultados y propuestas de mejoras"
+        ]
+    },
+    {
+        title: "Gestión de costos",
+        description: [
+            "On boarding",
+            "Clasificación de egresos",
+            "Estructura de costos",
+            "Asignación de costeos",
+            "Plan de optimización",
+            "Implementación y actualización",
+            "Seguimientos de los resultados y propuestas de mejoras"
+        ]
+    },
+    {
+        title: "Gestión de rentabilidad/resultados",
+        description: [
+            "On boarding",
+            "Análisis de ventas",
+            "Análisis de gastos",
+            "Determinaciòn de puento de equilibrio",
+            "Análisis de márgenes",
+            "Estrategia de maximización",
+            "Monitoreo y proyecciòn"
+        ]
+    },
+    {
+        title: "Tableros de gestión",
+        description: [
+            "On boarding",
+            "Definición de KPIs críticos",
+            "Consolidación de información",
+            "Automatización de carga",
+            "Análisis y ejecución de tableros",
+            "Seguimientos de los resultados y propuestas de mejoras"
+        ]
+    },
+    {
+        title: "Auditoría de gestión",
+        description: [
+            "On boarding",
+            "Definición de alcance y objetivos",
+            "Evaluación de procesos afectados",
+            "Diseño de controles",
+            "Verificación de resultados",
+            "Identificación de desvios y correciones",
+            "Seguimientos de los resultados y propuestas de mejoras"
+        ]
+    }
+]
 
 export default function MethodologyTimeline() {
     const itemsRef = useRef([]);
@@ -139,41 +215,16 @@ export default function MethodologyTimeline() {
                 <h3>Metodología por Servicio</h3>
 
                 <div className="services-grid">
-                    {[
-                        {
-                            title: "Procesos",
-                            description:
-                                "Optimización y rediseño de procesos internos para mejorar eficiencia operativa y reducir fricciones.",
-                        },
-                        {
-                            title: "Estructura Financiera",
-                            description:
-                                "Ordenamiento de cuentas, planificación financiera y diseño de estructuras sostenibles.",
-                        },
-                        {
-                            title: "Gestión de Costos",
-                            description:
-                                "Análisis y estructuración de costos para maximizar márgenes y detectar oportunidades de mejora.",
-                        },
-                        {
-                            title: "Rentabilidad / Resultados",
-                            description:
-                                "Evaluación de márgenes, punto de equilibrio y estrategias de maximización de beneficios.",
-                        },
-                        {
-                            title: "Tableros de Gestión",
-                            description:
-                                "Diseño e implementación de KPIs críticos y dashboards automatizados para toma de decisiones.",
-                        },
-                        {
-                            title: "Auditoría de Gestión",
-                            description:
-                                "Revisión integral de procesos y controles para detectar desvíos y optimizar resultados.",
-                        },
-                    ].map((service, index) => (
-                        <div key={index} className="service-card">
+                    {methodservices.map((service, index) => (
+                        <div key={index} className="method-service-card">
                             <h4>{service.title}</h4>
-                            <p>{service.description}</p>
+                            <ul>
+                                {service.description.map((description, i) => (
+                                    <li key={i}>
+                                        <FaCaretRight className="flex-icon"/>
+                                        {description}</li>
+                                ))}
+                            </ul>
                         </div>
                     ))}
                 </div>
