@@ -1,30 +1,20 @@
 
-.about-header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 60px;
-}
 
-.about-header h2 {
+.head-content h3 {
   font-size: 2.5rem;
   color: var(--third-color);
   margin-bottom: 20px;
   font-weight: 600;
 }
 
-.about-header h2 span {
+.head-content h3 span {
   background: linear-gradient(90deg, #7aa2ff, #4de0c1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.about-header p {
+.head-content p {
   font-size: 1.2rem;
-  width: 70%;
   color: #cfd3ff;
   line-height: 1.6;
 }
@@ -82,7 +72,7 @@
 /*################ RESPONSIVE DESIGN ################*/
 
 @media (max-width: 723px) {
-  .head-content p {
+  .head-content {
     width: 100%;
   }
 }

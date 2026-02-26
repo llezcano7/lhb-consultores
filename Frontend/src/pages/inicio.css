@@ -102,6 +102,7 @@
   flex-direction: column;
   justify-content: center;
   z-index: 3;
+  overflow: hidden;
 }
 
 
@@ -416,6 +417,7 @@
 
 .service-section {
   display: grid;
+  align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 2rem;
   animation: fadeInUp 1s ease-out 0.9s both;
@@ -1326,6 +1328,10 @@
 
   .service-section.container {
     padding-inline: 1.5rem;
+  }
+
+  .service-section {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
   .contact-inicio-section.container {

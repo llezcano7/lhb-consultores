@@ -52,26 +52,6 @@
    padding-block: 6rem;
  }
 
- .head-content h3 {
-  font-size: 2.5rem;
-  line-height: 1.15;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: var(--third-color);
-}
-
-.head-content span {
-  background: linear-gradient(90deg, #7aa2ff, #4de0c1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.head-content p {
-  font-size: 1.2rem;
-  line-height: 1.7;
-  color: #cfd3ff;
-}
-
 @media (max-width: 723px) {
   .section.container {
     padding-inline: 3rem;
