@@ -227,6 +227,9 @@
 }
 
 @media (max-width: 762px) {
+  head-content {
+    width: 100% !important;
+  }
   .layout-normal,
   .layout-reversed {
     grid-template-columns: 1fr;

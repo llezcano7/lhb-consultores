@@ -73,6 +73,6 @@
 
 @media (max-width: 723px) {
   .head-content {
-    width: 100%;
+    width: 100% !important;
   }
 }
