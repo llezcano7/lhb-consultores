@@ -184,7 +184,7 @@ export default function MethodologyTimeline() {
             <div className="head-content">
                 <span className="eyebrow">Metodología</span>
                 <h3>Procesos ágiles y sólidos que generan <span>resultados medibles y efectivos</span></h3>
-                <p>Diseñamos un proceso ágil y estructurado que transforma cada intervención en resultados medibles, aportando el orden que tu gestión financiera necesita.</p>
+                <p>Diseñamos un proceso ágil y estructurado que transforma cada intervención en resultados medibles, aportando el orden que tu empresa necesita.</p>
             </div>
             <div className="timeline-container">
                 <div className="timeline-line">
