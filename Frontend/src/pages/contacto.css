@@ -144,6 +144,10 @@
 /*################ RESPONSIVE DESIGN ################*/
 
 @media (max-width: 723px) {
+  .contact-section.container {
+    padding-inline: 3rem;
+  }
+
   .contact-container {
     display: flex;
     flex-direction: column;
@@ -163,6 +167,10 @@
 }
 
 @media (max-width: 510px) {
+  .contact-section.container {
+    padding-inline: 1.5rem;
+  }
+
   .contact-form {
     width: 100%;
   }
