@@ -1,12 +1,14 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { services } from "../components/servicelist";
+import { useNavigate } from "react-router-dom";
 import "./servicios.css";
 
 function ServiceCard({ service, index }) {
   const isEven = index % 2 === 0;
 
   return (
+
     <div
       id={`servicio-${service.id}`}
       className={`service-card ${isEven ? "layout-normal" : "layout-reversed"}`}>
@@ -76,25 +78,48 @@ export default function Servicios() {
     }
   }, [location]);
 
+  const navigate = useNavigate();
+
   return (
     <section className="section container block">
-        <div className="head-content">
-          <span className="eyebrow">Nuestros servicios</span>
-          <h3>
-            <span>Soluciones financieras</span> diseñadas para el futuro
-          </h3>
-          <p>
-            Combinamos análisis, estrategia y tecnología para impulsar decisiones
-            financieras más inteligentes y sostenibles.
-          </p>
+      <div className="head-content">
+        <span className="eyebrow">Nuestros servicios</span>
+        <h3>
+          <span>Soluciones financieras</span> diseñadas para el futuro
+        </h3>
+        <p>
+          Combinamos análisis, estrategia y tecnología para impulsar decisiones
+          financieras más inteligentes y sostenibles.
+        </p>
+      </div>
+        <div className="flex-services">
+          <div onClick={() => navigate('/servicios#servicio-1')}>
+            <h3>Procesos y operaciones</h3>
+          </div>
+          <div onClick={() => navigate('/servicios#servicio-2')}>
+            <h3>Estructuras financieras</h3>
+          </div>
+          <div onClick={() => navigate('/servicios#servicio-3')}>
+            <h3>Costos</h3>
+          </div>
+          <div onClick={() => navigate('/servicios#servicio-4')}>
+            <h3>Gestión de rentabilidad</h3>
+          </div>
+          <div onClick={() => navigate('/servicios#servicio-5')}>
+            <h3>Tableros de gestión</h3>
+          </div>
+          <div onClick={() => navigate('/servicios#servicio-6')}>
+            <h3>Control de gestión</h3>
+          </div>
         </div>
 
-        {/* Lista de servicios */}
-        <div className="services-list">
-          {services.map((service, index) => (
-            <ServiceCard key={service.id} service={service} index={index} />
-          ))}
-        </div>
+      {/* Lista de servicios */}
+
+      <div className="services-list">
+        {services.map((service, index) => (
+          <ServiceCard key={service.id} service={service} index={index} />
+        ))}
+      </div>
     </section>
   );
 }

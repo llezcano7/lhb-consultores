@@ -1,6 +1,4 @@
-
-
-.head-content h3 {
+ .head-content h3 {
   font-size: 2.5rem;
   color: var(--third-color);
   margin-bottom: 20px;
@@ -53,7 +51,7 @@
 
 .about-vision {
   text-align: center;
-  max-width: 800px;
+  width: 80%;
   margin: auto;
 }
 

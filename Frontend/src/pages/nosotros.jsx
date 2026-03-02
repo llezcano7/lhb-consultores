@@ -18,26 +18,22 @@ const Nosotros = () => {
         <div className="about-card">
           <h3>Visión Estratégica</h3>
           <p>
-            Analizamos cada escenario desde múltiples dimensiones para
-            anticiparnos a los cambios del mercado y convertir la
-            incertidumbre en oportunidades reales.
+            Transformamos problemáticas en oportunidades de mejora.
+            Ordenamos procesos, revisamos costos y estructuramos la gestión para crear una base sólida que impulse el crecimiento de tu negocio.
           </p>
         </div>
 
         <div className="about-card">
           <h3>¿Porqué LHB?</h3>
           <p>
-            Porque ofrecemos diagnósticos rápidos y soluciones claras con un enfoque consultivo, no invasivo. Nos gusta trabajar en equipo y acompañando a nuestros clientes en cada acción de manera personalizada.
+            Nuestro enfoque combina análisis práctico, planificación y acompañamiento cercano. Ayudamos a implementar herramientas simples y efectivas para mejorar la eficiencia operativa, optimizar recursos, reducir gastos innecesarios y establecer indicadores que permitan recuperar el control del negocio. No creemos en soluciones complejas, sino en estructuras claras que faciliten el crecimiento sostenido.
           </p>
         </div>
 
         <div className="about-card">
-          <h3>Nuestro equipo</h3>
+          <h3>Nuestra misión</h3>
           <p>
-            Somos consultores con experiencia en procesos, finanzas, tecnología y gestión.
-            Trabajamos junto a cada cliente como socios estratégicos,
-            priorizando la transparencia, la confianza y resultados medibles
-            a largo plazo.
+            Más que realizar diagnósticos, acompañamos la implementación de mejoras concretas que impacten en la rentabilidad, la organización y la estabilidad financiera de tu empresa. Nuestro objetivo es que cada PyME pueda crecer con bases sólidas, mayor previsibilidad y una gestión profesional alineada a sus metas de largo plazo.
           </p>
         </div>
       </div>

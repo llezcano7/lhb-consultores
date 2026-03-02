@@ -1,58 +1,71 @@
 import React from "react";
 import { useEffect, useRef } from "react";
 import { FaCaretRight } from "react-icons/fa";
+import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineTeam } from "react-icons/ai";
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
+import { AiOutlineCheck } from "react-icons/ai";
+import { LuTrendingUp } from "react-icons/lu";
+
+
+
 import "./metodologia.css";
 
 const steps = [
     {
         title: "Diagnóstico Situacional",
+        icon: <AiOutlineSearch />,
         description:
             "Antes de proponer, escuchamos y analizamos profundamente la realidad actual de tu PYME",
         items: [
-            "- Entrevistas con actores clave",
-            "- Recolección de datos históricos y operativos",
-            "- Identificación de puntos críticos",
-            "- Elaboración de propuesta de trabajo",
+            "-Entrevistas con actores clave",
+            "-Recolección de datos históricos y operativos",
+            "-Identificación de puntos críticos",
+            "-Elaboración de propuesta de trabajo",
         ],
     },
     {
         title: "Onboarding y Alineación",
+        icon: <AiOutlineTeam  />,
         description:
             "Establecemos las bases de la relación y definimos objetivos conjuntos",
         items: [
-            "- Presentación del equipo",
-            "- Definición de objetivos",
-            "- Acceso a herramientas compartidas",
+            "-Presentación del equipo",
+            "-Definición de objetivos",
+            "-Acceso a herramientas compartidas",
         ],
     },
     {
         title: "Ejecución del Plan",
+        icon: <AiOutlineFundProjectionScreen />,
         description:
-            "Transformamos la estrategia en realidad operativa",
+        "Transformamos la estrategia en realidad operativa",
         items: [
-            "- Despliegue táctico personalizado",
-            "- Capacitación técnica",
-            "- Implementación de cambios",
+            "-Despliegue táctico personalizado",
+            "-Capacitación técnica",
+            "-Implementación de cambios",
         ],
     },
     {
         title: "Seguimiento de Resultados",
+        icon: <LuTrendingUp />,
         description:
-            "Monitoreamos que la implementación funcione correctamente",
+        "Monitoreamos que la implementación funcione correctamente",
         items: [
-            "- Medición periódica de KPIs",
-            "- Ajustes en tiempo real",
-            "- Reuniones de avance",
+            "-Medición periódica de KPIs",
+            "-Ajustes en tiempo real",
+            "-Reuniones de avance",
         ],
     },
     {
         title: "Consolidación y Cierre",
+        icon: <AiOutlineCheck  />,
         description:
             "Garantizamos sostenibilidad sin dependencia eterna",
         items: [
-            "- Entrega de reportes finales",
-            "- Transferencia de conocimiento",
-            "- Plan de sostenibilidad",
+            "-Entrega de reportes finales",
+            "-Transferencia de conocimiento",
+            "-Plan de sostenibilidad",
         ],
     },
 ];
@@ -199,7 +212,10 @@ export default function MethodologyTimeline() {
                             }`}
                     >
                         <div className="timeline-content">
+                            <div className="timeline-title">
                             <h3>{step.title}</h3>
+                            <span className="timeline-icon">{step.icon}</span>
+                            </div>
                             <p>{step.description}</p>
                             <ul>
                                 {step.items.map((item, i) => (
@@ -221,7 +237,7 @@ export default function MethodologyTimeline() {
                             <ul>
                                 {service.description.map((description, i) => (
                                     <li key={i}>
-                                        <FaCaretRight className="flex-icon"/>
+                                        <FaCaretRight className="flex-icon" />
                                         {description}</li>
                                 ))}
                             </ul>

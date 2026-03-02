@@ -158,30 +158,35 @@ export default function Inicio() {
             {/* SERVICE SECTION */}
 
             <section className="service-section container block">
-                <div className="service-item" onClick={() => navigate('/servicios#servicio-1')}>
-                    <h3>Procesos y operaciones</h3>
-                    <BiExpand className="item-icon" />
+                <div className="service-inicio-title">
+                    <h3>Nuestros servicios</h3>
                 </div>
-                <div className="service-item" onClick={() => navigate('/servicios#servicio-2')}>
-                    <h3>Estructura financiera</h3>
-                    <SiInstructure className="item-icon" />
+                <div className="service-grid ">
+                    <div className="service-item" onClick={() => navigate('/servicios#servicio-1')}>
+                        <h3>Procesos y operaciones</h3>
+                        <BiExpand className="item-icon" />
+                    </div>
+                    <div className="service-item" onClick={() => navigate('/servicios#servicio-2')}>
+                        <h3>Estructura financiera</h3>
+                        <SiInstructure className="item-icon" />
 
-                </div>
-                <div className="service-item" onClick={() => navigate('/servicios#servicio3')}>
-                    <h3>Costos</h3>
-                    <FaMoneyBillTransfer className="item-icon" />
-                </div>
-                <div className="service-item" onClick={() => navigate('/servicios#servicio-4')}>
-                    <h3>Gestión de rentabilidad</h3>
-                    <FaChartLine className="item-icon" />
-                </div>
-                <div className="service-item" onClick={() => navigate('/servicios#servicio-5')}>
-                    <h3>Tableros de gestión</h3>
-                    <FaClipboardList className="item-icon" />
-                </div>
-                <div className="service-item" onClick={() => navigate('/servicios#servicio-6')}>
-                    <h3>Control de gestión</h3>
-                    <BsTools className="item-icon" />
+                    </div>
+                    <div className="service-item" onClick={() => navigate('/servicios#servicio3')}>
+                        <h3>Costos</h3>
+                        <FaMoneyBillTransfer className="item-icon" />
+                    </div>
+                    <div className="service-item" onClick={() => navigate('/servicios#servicio-4')}>
+                        <h3>Gestión de rentabilidad</h3>
+                        <FaChartLine className="item-icon" />
+                    </div>
+                    <div className="service-item" onClick={() => navigate('/servicios#servicio-5')}>
+                        <h3>Tableros de gestión</h3>
+                        <FaClipboardList className="item-icon" />
+                    </div>
+                    <div className="service-item" onClick={() => navigate('/servicios#servicio-6')}>
+                        <h3>Control de gestión</h3>
+                        <BsTools className="item-icon" />
+                    </div>
                 </div>
             </section>
 
@@ -190,7 +195,7 @@ export default function Inicio() {
             <section className="content-section container">
                 <div className="content-wrapper block">
                     <div className="content-text">
-                        <h3>La estructura financiera/tecnica necesaria para la escabilidad<span> ordenada de organizaciones en crecimiento</span></h3>
+                        <h3>La estructura financiera/técnica necesaria para la escabilidad<span> ordenada de organizaciones en crecimiento</span></h3>
                         <p> En LHB nos especilalizamos en la profesionalización de empresas, con foco en finanzas, optimización de procesos y gestión.</p>
                         <p>Ayudamos a pymes, empresas familiares y organizaciones a crecer de manera sostenible, con información clara, roles definidos y estructuras que perduran.</p>
                     </div>
@@ -231,10 +236,7 @@ export default function Inicio() {
 
             <section className="contact-inicio-section container block">
                 <div className="contact-inicio-text">
-                    <h3>Trabajemos juntos, potencia tu empresa</h3>
-                    <p>Ordenamos la gestión de tu empresa a través de un enfoque estratégico, información eficiente y planificación inteligente.
-                        <br />
-                        Comunicate con nosotros y construyamos juntos soluciones financieras para tu negocio.</p>
+                    <h3>Contactanos y agendá tu consultoría</h3>
                 </div>
                 <div className="form-container">
                     <div className="form-group2">

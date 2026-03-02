@@ -21,6 +21,10 @@
    padding-block: 8rem;
  }
 
+ .bold {
+   font-weight: bolder;
+ }
+
  .eyebrow {
    font-size: 1.2rem;
    letter-spacing: 2px;
@@ -52,14 +56,14 @@
    padding-block: 6rem;
  }
 
-@media (max-width: 723px) {
-  .section.container {
-    padding-inline: 3rem;
-  }
-}
+ @media (max-width: 723px) {
+   .section.container {
+     padding-inline: 3rem;
+   }
+ }
 
-@media (max-width: 510px) {
-  .section.container {
-    padding-inline: 1.5rem;
-  }
-}
+ @media (max-width: 510px) {
+   .section.container {
+     padding-inline: 1.5rem;
+   }
+ }

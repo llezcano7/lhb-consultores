@@ -416,6 +416,26 @@
 
 
 .service-section {
+  width: 100%;
+  background: linear-gradient(135deg, #25262f, #111633);
+}
+
+.service-inicio-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block-end: 6rem;
+  text-align: center;
+}
+
+.service-inicio-title h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--third-color);
+}
+
+.service-grid {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -1049,7 +1069,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  box-sizing: border-box;
   border-radius: 16px;
   background-size: 200% 100%;
   animation: gradient 5s ease infinite;
@@ -1330,7 +1349,7 @@
     padding-inline: 1.5rem;
   }
 
-  .service-section {
+  .service-grid {
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 

@@ -28,6 +28,7 @@
     position: relative;
     gap: 1rem;
     padding: 2rem;
+    text-align: center;
     background: rgba(26, 47, 79, 0.4);
     border: 1px solid rgba(100, 200, 255, 0.15);
     border-radius: 16px;
@@ -63,6 +64,18 @@
     box-shadow: 0 20px 60px rgba(0, 102, 255, 0.2);
 }
 
+.timeline-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+}
+
+.timeline-icon {
+    font-size: 1.8rem;
+    color: var(--third-color);
+}
+
 .timeline-content h3 {
     font-size: 1.4rem;
     color: #4de0c1;
@@ -71,10 +84,6 @@
 .timeline-content p {
     font-size: 1.1rem;
     color: var(--third-color)
-}
-
-.timeline-content ul {
-    padding-left: 15px;
 }
 
 .timeline-content li {
