@@ -171,7 +171,7 @@ export default function Inicio() {
                         <SiInstructure className="item-icon" />
 
                     </div>
-                    <div className="service-item" onClick={() => navigate('/servicios#servicio3')}>
+                    <div className="service-item" onClick={() => navigate('/servicios#servicio-3')}>
                         <h3>Costos</h3>
                         <FaMoneyBillTransfer className="item-icon" />
                     </div>
