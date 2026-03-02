@@ -17,7 +17,7 @@ export default function Header() {
         <>
             <div className='top-header container'>
                 <p> <FaSquareEnvelope className='email-icon' />contacto@lhb.com</p>
-                <p> <FaSquarePhone className='phone-icon' />+54 9 1155773231</p>
+                <p> <FaSquarePhone className='phone-icon' />+54 9 1169094236</p>
             </div>
             <header className='header-container container'>
                 <Link to="/"> <img className='logo' src="/LHB-logo.png" alt="logo principal de LHB Consultores" /></Link>

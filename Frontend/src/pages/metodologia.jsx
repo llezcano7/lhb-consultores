@@ -227,7 +227,7 @@ export default function MethodologyTimeline() {
                 ))}
             </div>
 
-            <section className="services-methodology">
+            <div className="services-methodology">
                 <h3>Metodología por Servicio</h3>
 
                 <div className="services-grid">
@@ -244,8 +244,7 @@ export default function MethodologyTimeline() {
                         </div>
                     ))}
                 </div>
-            </section>
-
+            </div>
 
         </section>
 

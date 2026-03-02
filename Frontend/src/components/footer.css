@@ -1,9 +1,51 @@
 .footer {
-      background: linear-gradient(135deg, #0c0f24, #111633);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary-color);
       padding-block: 3rem;
 }
-.footer p{
+
+.footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+}
+.footer-content p{
       text-align: center;
       font-size: large;
-      color: var(--text-dim);
+      color: var(--text-light);
+}
+
+.media-icons {
+      position: absolute;
+      padding-inline-start: 6rem;
+      top: 20;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 3rem;
+      color: var(--text-light);
+}
+
+/*################ RESPONSIVE DESIGN ################*/
+
+
+@media (max-width: 762px) {
+      .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+      }
+      .media-icons {
+            position: relative;
+            padding-inline-start: 0;
+      }
+
 }
