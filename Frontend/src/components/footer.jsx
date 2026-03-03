@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="footer-content">
             <p> © 2026 LHB consultores - Todos los derechos reservados.</p>
             <br />
-            <p>Desarrollado por flexmedia</p>
+            <p>Desarrollado por flexmedia!</p>
             </div>
         </footer>
     )
