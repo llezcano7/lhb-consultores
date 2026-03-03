@@ -156,7 +156,10 @@
     width: 120px;
   }
 }
-
+.inicio-text h1 {
+  font-size: 4rem;
+  color: var(--third-color);
+}
 .inicio-text h3 {
   font-size: clamp(1.25rem, 2.5vw, 1.75rem);
   font-weight: 300;
