@@ -33,18 +33,24 @@
 
 .media-icons a {
       color: var(--text-light);
-      transition: color 0.3s ease;
 }
 
 /*################ RESPONSIVE DESIGN ################*/
 
 
-@media (max-width: 762px) {
+@media (max-width: 900px) {
       .footer {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 2rem;
+            gap: 1rem;
+      }
+
+      .media-icons {
+            position: static;
+            display: flex;
+            align-items: center;
+            padding-inline-start: 0;
       }
 }
