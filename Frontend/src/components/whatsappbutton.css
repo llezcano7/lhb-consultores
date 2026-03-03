@@ -24,7 +24,6 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
-/* 🌟 Animación de pulso suave */
 @keyframes pulse {
   0% {
     transform: scale(1);
