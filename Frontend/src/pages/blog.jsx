@@ -28,8 +28,8 @@ const Blog = () => {
     <section className="blog-section container">
       <div className="blog-container block">
         <header className="blog-header">
-          <span className="blog-eyebrow">Insights</span>
-          <h2>Análisis, estrategia y visión financiera</h2>
+          <span className="blog-eyebrow">Blog</span>
+          <h2>Análisis, actualidad y visión financiera</h2>
           <p>
             Ideas, tendencias y herramientas para tomar mejores decisiones
             empresariales.

@@ -6,9 +6,6 @@ import { AiOutlineTeam } from "react-icons/ai";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { AiOutlineCheck } from "react-icons/ai";
 import { LuTrendingUp } from "react-icons/lu";
-
-
-
 import "./metodologia.css";
 
 const steps = [
@@ -26,7 +23,7 @@ const steps = [
     },
     {
         title: "Onboarding y Alineación",
-        icon: <AiOutlineTeam  />,
+        icon: <AiOutlineTeam />,
         description:
             "Establecemos las bases de la relación y definimos objetivos conjuntos",
         items: [
@@ -39,7 +36,7 @@ const steps = [
         title: "Ejecución del Plan",
         icon: <AiOutlineFundProjectionScreen />,
         description:
-        "Transformamos la estrategia en realidad operativa",
+            "Transformamos la estrategia en realidad operativa",
         items: [
             "-Despliegue táctico personalizado",
             "-Capacitación técnica",
@@ -50,7 +47,7 @@ const steps = [
         title: "Seguimiento de Resultados",
         icon: <LuTrendingUp />,
         description:
-        "Monitoreamos que la implementación funcione correctamente",
+            "Monitoreamos que la implementación funcione correctamente",
         items: [
             "-Medición periódica de KPIs",
             "-Ajustes en tiempo real",
@@ -59,7 +56,7 @@ const steps = [
     },
     {
         title: "Consolidación y Cierre",
-        icon: <AiOutlineCheck  />,
+        icon: <AiOutlineCheck />,
         description:
             "Garantizamos sostenibilidad sin dependencia eterna",
         items: [
@@ -213,8 +210,8 @@ export default function MethodologyTimeline() {
                     >
                         <div className="timeline-content">
                             <div className="timeline-title">
-                            <h3>{step.title}</h3>
-                            <span className="timeline-icon">{step.icon}</span>
+                                <h3>{step.title}</h3>
+                                <span className="timeline-icon">{step.icon}</span>
                             </div>
                             <p>{step.description}</p>
                             <ul>
@@ -226,7 +223,6 @@ export default function MethodologyTimeline() {
                     </div>
                 ))}
             </div>
-
             <div className="services-methodology">
                 <h3>Metodología por Servicio</h3>
 
@@ -245,7 +241,6 @@ export default function MethodologyTimeline() {
                     ))}
                 </div>
             </div>
-
         </section>
 
     );
