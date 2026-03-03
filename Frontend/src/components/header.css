@@ -134,3 +134,9 @@
     padding-inline: 1.5rem;
   }
 }
+
+@media (max-width: 346px) {
+  .top-header p{
+   font-size: .7rem;
+  }
+}
