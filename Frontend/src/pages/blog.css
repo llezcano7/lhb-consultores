@@ -3,6 +3,10 @@
   background: linear-gradient(135deg, #0c0f24, #111633);
 }
 
+.blog-container {
+  padding-block-start: 8rem;
+}
+
 
 .blog-header {
   width: 50%;
@@ -124,8 +128,9 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    text-align: center;
     justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
 
