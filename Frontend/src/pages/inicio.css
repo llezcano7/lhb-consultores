@@ -1321,7 +1321,9 @@
 .inicio-section {
     padding-inline: 1.5rem;
   }
-
+  .inicio-text h1 {
+    font-size: 3rem;
+  } 
   .top-header.container {
     padding-inline: 1.5rem;
   }
@@ -1368,5 +1370,12 @@
 
   .form-container {
     width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .tech-puzzle {
+  width: 220px;
+  height: 220px;
   }
 }

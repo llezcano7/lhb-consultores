@@ -29,7 +29,11 @@
       justify-content: center;
       gap: 1rem;
       font-size: 3rem;
+}
+
+.media-icons a {
       color: var(--text-light);
+      transition: color 0.3s ease;
 }
 
 /*################ RESPONSIVE DESIGN ################*/
@@ -43,9 +47,4 @@
             justify-content: center;
             gap: 2rem;
       }
-      .media-icons {
-            position: relative;
-            padding-inline-start: 0;
-      }
-
 }
