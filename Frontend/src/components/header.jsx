@@ -23,7 +23,7 @@ export default function Header() {
                 <a href="https://www.instagram.com/lhb.consultora?utm_source=qr&igsh=emI3YXJudDV2aHZz"><FaInstagramSquare className='instagram-icon'/></a>
                 </div>
                 <div className='header-icons'>
-                <p> <FaSquareEnvelope className='email-icon' />contacto@lhb.com</p>
+                <p> <FaSquareEnvelope className='email-icon' />contacto@lhbconsultora.com</p>
                 <p> <FaSquarePhone className='phone-icon' />+54 9 1169094236</p>
                 </div>
             </div>
