@@ -19,8 +19,8 @@ export default function Header() {
         <>
             <div className='top-header container'>
                 <div className='media-icons-header'>
-                <a href=""><FaLinkedinIn className='linkedin-icon' /></a>
-                <a href=""><FaInstagramSquare className='instagram-icon'/></a>
+                <a href="https://www.linkedin.com/in/consultora-lhb-0234123b5/"><FaLinkedinIn className='linkedin-icon' /></a>
+                <a href="https://www.instagram.com/lhb.consultora?utm_source=qr&igsh=emI3YXJudDV2aHZz"><FaInstagramSquare className='instagram-icon'/></a>
                 </div>
                 <div className='header-icons'>
                 <p> <FaSquareEnvelope className='email-icon' />contacto@lhb.com</p>
