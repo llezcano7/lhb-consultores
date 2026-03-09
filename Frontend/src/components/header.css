@@ -168,8 +168,14 @@
   }
 }
 
-@media (max-width: 346px) {
+@media (max-width: 397px) {
   .top-header p {
     font-size: .7rem;
+  }
+}
+
+@media (max-width: 346px) {
+  .top-header p {
+    font-size: .6rem;
   }
 }
