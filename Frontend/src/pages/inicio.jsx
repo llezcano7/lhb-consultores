@@ -101,171 +101,245 @@ export default function Inicio() {
 
     const navigate = useNavigate();
 
-    return (
-        <>
-            {/* FINTECH EFFECT */}
+    const Contacto = () => {
+        const [formData, setFormData] = useState({
+            name: "",
+            email: "",
+            company: "",
+            message: "",
+        });
+        const [status, setStatus] = useState(null); // null | 'success' | 'error'
+        const [loading, setLoading] = useState(false);
 
-            <div className="fintech-wrapper">
-                <canvas ref={canvasRef} className="particles-canvas" />
-                <div className="gradient-bg">
-                    <div className="gradient-orb orb-1"></div>
-                    <div className="gradient-orb orb-2"></div>
+        const handleChange = (e) => {
+            setFormData({ ...formData, [e.target.name]: e.target.value });
+        };
+
+        const handleSubmit = async (e) => {
+            e.preventDefault();
+            setLoading(true);
+
+            try {
+                const res = await fetch("http://localhost:3000/api/contact", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData),
+                });
+
+
+                const data = await res.json();
+
+                if (data.success) {
+                    setStatus("success");
+                    setFormData({ name: "", email: "", company: "", message: "" });
+                } else {
+                    setStatus("error");
+                }
+            } catch (error) {
+                console.error(error);
+                setStatus("error");
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        return (
+            <>
+                {/* FINTECH EFFECT */}
+
+                <div className="fintech-wrapper">
+                    <canvas ref={canvasRef} className="particles-canvas" />
+                    <div className="gradient-bg">
+                        <div className="gradient-orb orb-1"></div>
+                        <div className="gradient-orb orb-2"></div>
+                    </div>
+                    <div className="grid-overlay"></div>
+
+                    {/* INICIO SECTION */}
+
+                    <section className='inicio-section container'>
+                        <div className='inicio-text block'>
+                            <h1>Consultoría empresarial </h1>
+                            <h3>Pequeñas y medianas empresas</h3>
+                            <button className="button" onClick={() => navigate("/contacto")}>
+                                <span>Contactanos</span>
+                            </button>
+                        </div>
+                    </section>
                 </div>
-                <div className="grid-overlay"></div>
 
-                {/* INICIO SECTION */}
+                {/* METHOD SECTION */}
 
-                <section className='inicio-section container'>
-                    <div className='inicio-text block'>
-                        <h1>Consultoría empresarial </h1>
-                        <h3>Pequeñas y medianas empresas</h3>
-                        <button className="button" onClick={() => navigate("/contacto")}>
-                            <span>Contactanos</span>
-                        </button>
+                <section className="method-inicio-section container block">
+                    <div className="method-inicio-content">
+                        <div className="method-inicio-text">
+                            <h3>
+                                ¿Caos operativo u <span>orden rentable?</span>
+                            </h3>
+
+                            <p>
+                                Transformamos el desorden en datos y los datos en decisiones inteligentes. Profesionalizamos cada área de tu empresa con procesos diseñados a medida, asegurando que cada recurso invertido se traduzca en mayor rentabilidad y eficiencia.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="method-inicio-animation">
+                        <div className="tech-puzzle">
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </section >
+
+
+                <div className="inicio-separator container">
+                    <h3> <span className="bold">Gestión</span> eficiente = crecimiento <span className="bold">sostenible</span>
+                    </h3>
+                </div>
+
+                {/* SERVICE SECTION */}
+
+                <section className="service-section container block">
+                    <div className="service-inicio-title">
+                        <h3>Nuestros servicios</h3>
+                    </div>
+                    <div className="service-grid ">
+                        <div className="service-item" onClick={() => navigate('/servicios#servicio-1')}>
+                            <h3>Procesos y operaciones</h3>
+                            <BiExpand className="item-icon" />
+                        </div>
+                        <div className="service-item" onClick={() => navigate('/servicios#servicio-2')}>
+                            <h3>Estructura financiera</h3>
+                            <SiInstructure className="item-icon" />
+
+                        </div>
+                        <div className="service-item" onClick={() => navigate('/servicios#servicio-3')}>
+                            <h3>Costos</h3>
+                            <FaMoneyBillTransfer className="item-icon" />
+                        </div>
+                        <div className="service-item" onClick={() => navigate('/servicios#servicio-4')}>
+                            <h3>Gestión de rentabilidad</h3>
+                            <FaChartLine className="item-icon" />
+                        </div>
+                        <div className="service-item" onClick={() => navigate('/servicios#servicio-5')}>
+                            <h3>Tableros de gestión</h3>
+                            <FaClipboardList className="item-icon" />
+                        </div>
+                        <div className="service-item" onClick={() => navigate('/servicios#servicio-6')}>
+                            <h3>Control de gestión</h3>
+                            <BsTools className="item-icon" />
+                        </div>
                     </div>
                 </section>
-            </div>
 
-            {/* METHOD SECTION */}
+                {/* CONTENT SECTION */}
 
-            <section className="method-inicio-section container block">
-                <div className="method-inicio-content">
-                    <div className="method-inicio-text">
-                        <h3>
-                            ¿Caos operativo u <span>orden rentable?</span>
-                        </h3>
-
-                        <p>
-                            Transformamos el desorden en datos y los datos en decisiones inteligentes. Profesionalizamos cada área de tu empresa con procesos diseñados a medida, asegurando que cada recurso invertido se traduzca en mayor rentabilidad y eficiencia.
-                        </p>
-                    </div>
-                </div>
-                <div className="method-inicio-animation">
-                    <div className="tech-puzzle">
-                        <span></span><span></span><span></span>
-                        <span></span><span></span><span></span>
-                        <span></span><span></span><span></span>
-                    </div>
-                </div>
-            </section >
-
-
-            <div className="inicio-separator container">
-                <h3> <span className="bold">Gestión</span> eficiente = crecimiento <span className="bold">sostenible</span>
-                </h3>
-            </div>
-
-            {/* SERVICE SECTION */}
-
-            <section className="service-section container block">
-                <div className="service-inicio-title">
-                    <h3>Nuestros servicios</h3>
-                </div>
-                <div className="service-grid ">
-                    <div className="service-item" onClick={() => navigate('/servicios#servicio-1')}>
-                        <h3>Procesos y operaciones</h3>
-                        <BiExpand className="item-icon" />
-                    </div>
-                    <div className="service-item" onClick={() => navigate('/servicios#servicio-2')}>
-                        <h3>Estructura financiera</h3>
-                        <SiInstructure className="item-icon" />
-
-                    </div>
-                    <div className="service-item" onClick={() => navigate('/servicios#servicio-3')}>
-                        <h3>Costos</h3>
-                        <FaMoneyBillTransfer className="item-icon" />
-                    </div>
-                    <div className="service-item" onClick={() => navigate('/servicios#servicio-4')}>
-                        <h3>Gestión de rentabilidad</h3>
-                        <FaChartLine className="item-icon" />
-                    </div>
-                    <div className="service-item" onClick={() => navigate('/servicios#servicio-5')}>
-                        <h3>Tableros de gestión</h3>
-                        <FaClipboardList className="item-icon" />
-                    </div>
-                    <div className="service-item" onClick={() => navigate('/servicios#servicio-6')}>
-                        <h3>Control de gestión</h3>
-                        <BsTools className="item-icon" />
-                    </div>
-                </div>
-            </section>
-
-            {/* CONTENT SECTION */}
-
-            <section className="content-section container">
-                <div className="content-wrapper block">
-                    <div className="content-text">
-                        <h3>La estructura financiera/técnica necesaria para la escabilidad<span> ordenada de organizaciones en crecimiento</span></h3>
-                        <p> En LHB nos especilalizamos en la profesionalización de empresas, con foco en finanzas, optimización de procesos y gestión.</p>
-                        <p>Ayudamos a pymes, empresas familiares y organizaciones a crecer de manera sostenible, con información clara, roles definidos y estructuras que perduran.</p>
-                    </div>
-                    <div className="content-features">
-                        <div className="feature-1">
-                            <div className="feature-title">
-                                <FiCpu className="feature-icon" />
-                                <h3>Ágil</h3>
-                            </div>
-                            <p>
-                                Optimizamos procesos para mejorar la eficiencia operativa de tu compañía llevando a cabo una metodología clara.
-                            </p>
+                <section className="content-section container">
+                    <div className="content-wrapper block">
+                        <div className="content-text">
+                            <h3>La estructura financiera/técnica necesaria para la escabilidad<span> ordenada de organizaciones en crecimiento</span></h3>
+                            <p> En LHB nos especilalizamos en la profesionalización de empresas, con foco en finanzas, optimización de procesos y gestión.</p>
+                            <p>Ayudamos a pymes, empresas familiares y organizaciones a crecer de manera sostenible, con información clara, roles definidos y estructuras que perduran.</p>
                         </div>
-                        <div className="feature-2">
-                            <div className="feature-title">
-                                <FiZap className="feature-icon" />
-                                <h3>Futuro</h3>
+                        <div className="content-features">
+                            <div className="feature-1">
+                                <div className="feature-title">
+                                    <FiCpu className="feature-icon" />
+                                    <h3>Ágil</h3>
+                                </div>
+                                <p>
+                                    Optimizamos procesos para mejorar la eficiencia operativa de tu compañía llevando a cabo una metodología clara.
+                                </p>
                             </div>
-                            <p>
-                                Te ayudamos transformando datos en información estratégica para que tomes mejores decisiones, permitiendo tener un crecimiento sostenible en el tiempo.
-                            </p>
+                            <div className="feature-2">
+                                <div className="feature-title">
+                                    <FiZap className="feature-icon" />
+                                    <h3>Futuro</h3>
+                                </div>
+                                <p>
+                                    Te ayudamos transformando datos en información estratégica para que tomes mejores decisiones, permitiendo tener un crecimiento sostenible en el tiempo.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="content-animation">
-                    <div className="loader">
-                        <div className="loader__bar"></div>
-                        <div className="loader__bar"></div>
-                        <div className="loader__bar"></div>
-                        <div className="loader__bar"></div>
-                        <div className="loader__bar"></div>
-                        <div className="loader__ball"></div>
+                    <div className="content-animation">
+                        <div className="loader">
+                            <div className="loader__bar"></div>
+                            <div className="loader__bar"></div>
+                            <div className="loader__bar"></div>
+                            <div className="loader__bar"></div>
+                            <div className="loader__bar"></div>
+                            <div className="loader__ball"></div>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* CONTACT  SECTION */}
+                {/* CONTACT  SECTION */}
 
-            <section className="contact-inicio-section container block">
-                <div className="contact-inicio-text">
-                    <h3>Contactanos y agendá tu consultoría</h3>
-                </div>
-                <div className="form-container">
-                    <div className="form-group2">
-                        <label>Nombre</label>
-                        <input type="text" placeholder="Tu nombre" />
+                <section className="contact-inicio-section container block">
+                    <div className="contact-inicio-text">
+                        <h3>Contactanos y agendá tu consultoría</h3>
                     </div>
+                    <form className="form-container" onSubmit={handleSubmit}>
+                        <div className="form-group2">
+                            <label>Nombre</label>
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Tu nombre"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
 
-                    <div className="form-group2">
-                        <label>Email</label>
-                        <input type="email" placeholder="tu@email.com" />
-                    </div>
+                        <div className="form-group2">
+                            <label>Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="tu@email.com"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
 
-                    <div className="form-group2">
-                        <label>Empresa</label>
-                        <input type="text" placeholder="Nombre de tu empresa" />
-                    </div>
+                        <div className="form-group2">
+                            <label>Empresa</label>
+                            <input
+                                type="text"
+                                name="company"
+                                placeholder="Nombre de tu empresa"
+                                value={formData.company}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <div className="form-group2">
+                            <label>Mensaje</label>
+                            <textarea
+                                name="message"
+                                placeholder="Contanos brevemente en qué podemos ayudarte"
+                                rows="4"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        {status === "success" && (
+                            <p className="form-success">¡Mensaje enviado correctamente!</p>
+                        )}
+                        {status === "error" && (
+                            <p className="form-error">Hubo un error, intentá de nuevo.</p>
+                        )}
+                        <button type="submit" className="contact-button" disabled={loading}>
+                            {loading ? "Enviando..." : "Enviar mensaje"}
+                        </button>
+                    </form>
+                </section>
+            </>
+        );
+    }
 
-                    <div className="form-group2">
-                        <label>Mensaje</label>
-                        <textarea
-                            placeholder="Contanos brevemente en qué podemos ayudarte"
-                            rows="4"
-                        />
-                    </div>
-                    <button type="submit" className="contact-button">
-                        Enviar mensaje
-                    </button>
-                </div>
-            </section >
-        </>
-    );
+    return <Contacto />;
 }

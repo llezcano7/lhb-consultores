@@ -3,40 +3,37 @@ import nodemailer from 'nodemailer'
 import cors from 'cors'
 import dotenv from 'dotenv'
 
-// Carga las variables del archivo .env
 dotenv.config()
 
 const app = express()
 
-// Middlewares
-app.use(cors({ origin: 'http://localhost:5173' })) // origen de tu Vite
-app.use(express.json()) // para poder leer el body en formato JSON
+app.use(cors({ origin: 'http://localhost:5173' }))
+app.use(express.json())
 
-// Configuración del transporter de email
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: process.env.EMAIL_HOST,
+  port: 465,
+  secure: true,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
 })
 
-// Ruta del formulario de contacto
 app.post('/api/contact', async (req, res) => {
   const { name, email, company, message } = req.body
 
-  // Validación básica
-  if (!name || !email || !company ||!message) {
+  if (!name || !email || !company || !message) {
     return res.status(400).json({ success: false, message: 'Todos los campos son obligatorios' })
   }
 
   try {
     await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: `"LHB Consultores" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_DEST,
       subject: `Nuevo mensaje de contacto de ${name}`,
       html: `
-        <h3>Nuevo mensaje desde el formulario</h3>
+        <h3>Nuevo mensaje desde el formulario de la página web</h3>
         <p><b>Nombre:</b> ${name}</p>
         <p><b>Email:</b> ${email}</p>
         <p><b>Empresa:</b> ${company}</p>
@@ -51,6 +48,5 @@ app.post('/api/contact', async (req, res) => {
   }
 })
 
-// Levantar el servidor
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`))

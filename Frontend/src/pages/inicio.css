@@ -1175,6 +1175,22 @@
   border-color: #fff;
 }
 
+.form-success {
+  color: green;
+  background-color: #e6f4ea;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.form-error {
+  color: red;
+  background-color: #fdecea;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
 /*################ RESPONSIVE DESIGN ################*/
 
 @media (max-width: 1050px) {
