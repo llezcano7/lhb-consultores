@@ -24,6 +24,20 @@ const Blog = () => {
     fetchPosts();
   }, []);
 
+  // Función para extraer la imagen del post
+  const getImageFromPost = (post) => {
+    // Intenta primero con _embedded (por si funciona en el futuro)
+    let image = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
+    
+    // Si no funciona, extrae la primera imagen del contenido HTML
+    if (!image && post.content?.rendered) {
+      const imgMatch = post.content.rendered.match(/<img[^>]+src="([^">]+)"/);
+      image = imgMatch ? imgMatch[1] : null;
+    }
+    
+    return image;
+  };
+
   return (
     <section className="blog-section container">
       <div className="blog-container">
@@ -47,8 +61,7 @@ const Blog = () => {
         {!loading && !error && posts.length > 0 && (
           <div className="blog-grid">
             {posts.map(post => {
-              const image =
-                post._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
+              const image = getImageFromPost(post);
 
               return (
                 <article key={post.id} className="blog-card">

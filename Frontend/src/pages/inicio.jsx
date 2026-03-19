@@ -120,7 +120,7 @@ export default function Inicio() {
             setLoading(true);
 
             try {
-                const res = await fetch("http://localhost:3000/api/contact", {
+                const res = await fetch("https://lhbconsultora.com/send.php", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(formData),
@@ -237,7 +237,7 @@ export default function Inicio() {
                 <section className="content-section container">
                     <div className="content-wrapper block">
                         <div className="content-text">
-                            <h3>La estructura financiera/técnica necesaria para la escabilidad<span> ordenada de organizaciones en crecimiento</span></h3>
+                            <h3>La estructura financiera/técnica necesaria para la escalabilidad<span> ordenada de organizaciones en crecimiento</span></h3>
                             <p> En LHB nos especilalizamos en la profesionalización de empresas, con foco en finanzas, optimización de procesos y gestión.</p>
                             <p>Ayudamos a pymes, empresas familiares y organizaciones a crecer de manera sostenible, con información clara, roles definidos y estructuras que perduran.</p>
                         </div>

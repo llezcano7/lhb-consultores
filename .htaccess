@@ -1,0 +1,40 @@
+# Evitar caché del index.html
+<FilesMatch "index\.html$">
+  FileETag None
+  <IfModule mod_headers.c>
+    Header unset ETag
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </IfModule>
+</FilesMatch>
+
+Options -MultiViews
+
+# Tipos MIME correctos
+<IfModule mod_mime.c>
+  AddType application/javascript .js .mjs
+  AddType text/css .css
+  AddType image/svg+xml .svg
+  AddType image/webp .webp
+</IfModule>
+
+# Rewrite para React Router
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # NO tocar WordPress - debe ir primero
+  RewriteRule ^blog/ - [L]
+  
+  # NO tocar assets - CRÍTICO
+  RewriteRule ^assets/ - [L]
+  
+  # NO tocar archivos que existen físicamente
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  
+  # Redirigir todo lo demás a index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
